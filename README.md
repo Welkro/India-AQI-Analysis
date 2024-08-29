@@ -1,4 +1,4 @@
-# **Visualizing Air Quality Index (AQI) Data for India Using LightningChart Python**
+# **Visualizing Air Quality Index (AQI) Data from India Using LightningChart Python**
 
 ## **Introduction**
 
