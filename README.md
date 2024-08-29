@@ -40,8 +40,6 @@ Here's a quick setup guide:
 - **LightningChart Python**: For creating high-performance, interactive data visualizations. ([documentation](https://lightningchart.com/python-charts/docs/))
 - **Pycountry**: Used to convert country names to ISO codes for the global AQI map visualization. ([documentation](https://pypi.org/project/pycountry/))
 
-**Note on `pycountry`:** While `pycountry` is a relatively minor library in the context of this project, it played a crucial role in preparing the global AQI map chart. By converting country names to their ISO 3166-1 alpha-3 codes, we ensured accurate data mapping to the corresponding countries. This step, though minor, was essential for the accuracy of the global visualization.
-
 ### Working with Jupyter Notebooks in Visual Studio Code
 
 If you're using Visual Studio Code (VSCode) as your development environment, you can run Jupyter notebooks directly within it, which offers a seamless experience.
