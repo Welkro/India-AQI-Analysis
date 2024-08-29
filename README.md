@@ -78,10 +78,10 @@ The data was loaded into the notebook using Pandas:
   ```
 - **Handling Missing Data**: Identifying and handling missing or abnormal values.
 
-```python
-# Perform forward filling to replace null values in the DataFrame.
-india_AQI.ffill(inplace=True)
-```
+  ```python
+  # Perform forward filling to replace null values in the DataFrame.
+  india_AQI.ffill(inplace=True)
+  ```
 
 ## **Visualizing Data with LightningChart Python**
 
