@@ -385,7 +385,7 @@ chart.open(live=True)
 
 This map highlights global air quality differences, showing which regions face more severe air pollution challenges. Countries with higher AQI values (depicted in orange and red) are primarily located in areas with dense industrial activity, heavy traffic, or natural conditions that exacerbate pollution.
 
-### **Note on Dataset Processing**
+### **Note on Global AQI Dataset**
 
 Given that this article focuses primarily on India's AQI data, detailed steps for processing the global dataset are not included here. However, the dataset and complete code are available for readers who wish to explore this further. This approach ensures that the article remains focused while providing additional resources for those interested in a broader analysis.
 
