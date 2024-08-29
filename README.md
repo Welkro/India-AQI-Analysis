@@ -303,7 +303,7 @@ The box plot provides an overview of the average concentration values for variou
 
 The box plot shows the spread of data for pollutants like PM2.5, PM10, NO2, NH3, SO2, CO, and Ozone. The length of each box indicates the interquartile range, while the whiskers show the extent of the data, excluding outliers. Outliers are marked as red points. This visualization helps identify which pollutants have greater variability and extreme values, offering insights into the distribution and concentration of different air pollutants.
 
-#### **State-by-State Comparison of Pollutant Levels**
+### **State-by-State Comparison of Pollutant Levels**
 
 To gain deeper insights into how air quality varies across different states of India, we compared the average levels of key pollutants across various states. The stacked bar chart below illustrates each state's average concentrations of pollutants like PM2.5, PM10, NO2, SO2, CO, NH3, and Ozone.
 
