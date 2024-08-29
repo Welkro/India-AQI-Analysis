@@ -349,51 +349,6 @@ This visualization reveals significant differences in pollutant levels across st
 While this project primarily focuses on analyzing AQI data within India, it's also valuable to consider air quality in a global context. By visualizing global AQI values using a separate dataset, we can compare India's air quality with other countries, highlighting regional differences and providing a broader perspective on global pollution levels. This global map serves as a complementary analysis, showing how air quality challenges in India align with or differ from those in other parts of the world.
 
 ```python
-import pycountry  # Used to get ISO 3166-1 alpha-3 country codes
-
-# Extract all unique countries from the dataset.
-unique_countries = country_aqi['Country'].unique()
-
-# Create a dictionary to map country names to their ISO alpha-3 codes.
-country_to_iso = {}
-for country in unique_countries:
-    try:
-        # Find the ISO code for the country.
-        country_data = pycountry.countries.lookup(country)
-        country_to_iso[country] = country_data.alpha_3  # Map to alpha-3 ISO code (e.g., FIN for Finland)
-    except LookupError:
-        print(f"ISO code not found for: {country}")
-
-# Manual mappings for countries that were not found automatically.
-manual_ISO = {
-    "Bolivia (Plurinational State of)": "BOL",
-    "Democratic Republic of the Congo": "COD",
-    "Iran (Islamic Republic of)": "IRN",
-    "Republic of Korea": "KOR",
-    "State of Palestine": "PSE",
-    "Turkey": "TUR",  # Needed because Turkey is listed as Türkiye in pycountry's DB
-    "Venezuela (Bolivarian Republic of)": "VEN"
-}
-
-# Update the main dictionary with the manual ISO codes.
-country_to_iso.update(manual_ISO)
-
-# Map the ISO codes to the country_aqi DataFrame.
-country_aqi['ISO_A3'] = country_aqi['Country'].map(country_to_iso)
-
-# Filter out rows where the ISO code could not be found.
-country_aqi_filtered = country_aqi.dropna(subset=['ISO_A3'])
-
-# Prepare the final list of dictionaries with ISO codes and AQI values.
-region_data = country_aqi_filtered[['ISO_A3', 'AQI Value']].rename(columns={'AQI Value': 'value'}).to_dict(orient='records')
-
-# Display the first five entries of the final region data.
-region_data[:5]
-```
-
-With the ISO codes prepared, we created the following map chart to visualize the global AQI values:
-
-```python
 import lightningchart as lc
 lc.set_license("LICENSE_KEY")
 
